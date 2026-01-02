@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curiosidades e Entretenimento</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f2f2;
+}
+.container{
+    max-width:800px;
+    margin:auto;
+    background:#fff;
+    padding:15px;
+}
+header{
+    text-align:center;
+}
+.post{
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:20px;
+}
+.post img{
+    width:100%;
+    border-radius:10px;
+}
+.post h2{
+    color:#ff5722;
+}
+.share a{
+    display:inline-block;
+    margin:5px;
+    padding:6px 12px;
+    background:#ff9800;
+    color:#fff;
+    text-decoration:none;
+    border-radius:5px;
+}
+.share a:hover{
+    background:#e68900;
+}
+.comments{
+    margin-top:30px;
+    padding:15px;
+    background:#f9f9f9;
+    border-radius:10px;
+}
+.comments textarea{
+    width:100%;
+    height:80px;
+    padding:10px;
+}
+.comments button{
+    margin-top:10px;
+    padding:8px 15px;
+    background:#ff5722;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+}
+.comment{
+    background:#fff;
+    padding:10px;
+    margin-top:10px;
+    border-radius:5px;
+    border:1px solid #ddd;
+}
+footer{
+    text-align:center;
+    padding:15px;
+    background:#333;
+    color:#fff;
+    margin-top:30px;
+}
+</style>
+</head>
+
+  <script>
+let index = 20;
+
+const extras = [
+"O cérebro humano continua ativo mesmo durante o sono.",
+"O corpo humano troca de pele a cada 27 dias.",
+"O Facebook é azul porque Mark Zuckerberg é daltônico.",
+"A Lua está se afastando da Terra cerca de 3,8 cm por ano.",
+"O coração pode continuar batendo fora do corpo por alguns segundos.",
+"A água quente congela mais rápido que a fria (efeito Mpemba).",
+"O estômago produz um novo revestimento a cada 3 dias.",
+"O corpo humano brilha no escuro, mas não conseguimos ver.",
+"O som mais alto já registrado veio da erupção do Krakatoa.",
+"O Google recebe mais de 3 bilhões de pesquisas por dia."
+];
+
+function carregarMais(){
+    let div = document.getElementById("maisCuriosidades");
+    if(index - 20 >= extras.length){
+        alert("Não há mais curiosidades por agora 😉");
+        return;
+    }
+
+    div.innerHTML += `
+    <div class="post">
+        <h2>Curiosidade #${index+1}</h2>
+        <p>${extras[index-20]}</p>
+    </div>
+    `;
+    index++;
+}
+</script>
+
+<body>
+<div class="container">
+
+<header>
+<h1>🔥 Curiosidades & Entretenimento</h1>
+<p>Fatos reais que vão te surpreender</p>
+</header>
+
+<!-- CURIOSIDADES 1 A 20 -->
+<script>
+const curiosidades = [
+["https://images.unsplash.com/photo-1509042239860-f550ce710b93","O café é a segunda bebida mais consumida do mundo, perdendo apenas para a água."],
+["https://images.unsplash.com/photo-1562440499-64a38d8c0b0f","O chocolate pode melhorar o humor porque estimula a produção de serotonina."],
+["https://images.unsplash.com/photo-1546182990-dffeafbe841d","Elefantes conseguem reconhecer sua própria imagem no espelho."],
+["https://images.unsplash.com/photo-1522202228200-cdf9f6f4d6d7","Existem mais árvores na Terra do que estrelas na Via Láctea."],
+["https://images.unsplash.com/photo-1534159947288-25c61fda0a3b","A maior cachoeira do mundo fica na Venezuela."],
+["https://images.unsplash.com/photo-1583337130417-3b3518d6ff1d","O coração do camarão fica na cabeça."],
+["https://images.unsplash.com/photo-1601758123927-57c33f9f81b3","O DNA humano é surpreendentemente parecido com o da banana."],
+["https://images.unsplash.com/photo-1531177078308-8e03a9eae329","A luz do Sol leva cerca de 8 minutos para chegar à Terra."],
+["https://images.unsplash.com/photo-1500530855697-b586d89ba3ee","Os polvos têm três corações."],
+["https://images.unsplash.com/photo-1507525428034-b723cf961d3e","Mais de 70% do planeta Terra é coberto por água."],
+["https://images.unsplash.com/photo-1501785888041-af3ef285b470","O Monte Everest cresce alguns milímetros todos os anos."],
+["https://images.unsplash.com/photo-1500534314209-a25ddb2bd429","O mel nunca estraga, mesmo depois de milhares de anos."],
+["https://images.unsplash.com/photo-1500534623283-312aade485b7","O cérebro humano gera eletricidade suficiente para acender uma lâmpada pequena."],
+["https://images.unsplash.com/photo-1519681393784-d120267933ba","O som não se propaga no espaço."],
+["https://images.unsplash.com/photo-1504384308090-c894fdcc538d","O corpo humano produz calor suficiente para ferver meio litro de água em 30 minutos."],
+["https://images.unsplash.com/photo-1519681393784-d120267933ba","As formigas não dormem."],
+["https://images.unsplash.com/photo-1500530855697-b586d89ba3ee","Os tubarões existem antes das árvores."],
+["https://images.unsplash.com/photo-1499346030926-9a72daac6c63","O olho humano consegue distinguir cerca de 10 milhões de cores."],
+["https://images.unsplash.com/photo-1507525428034-b723cf961d3e","O oceano profundo é mais explorado que a Lua."],
+["https://images.unsplash.com/photo-1501785888041-af3ef285b470","O coração humano bate mais de 100 mil vezes por dia."]
+];
+
+curiosidades.forEach((c,i)=>{
+document.write(`
+<div class="post">
+<img src="${c[0]}">
+<h2>Curiosidade #${i+1}</h2>
+<p>${c[1]}</p>
+<div class="share">
+<a href="https://api.whatsapp.com/send?text=${encodeURIComponent(c[1])}" target="_blank">WhatsApp</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://seusite.com" target="_blank">Facebook</a>
+<a href="https://t.me/share/url?url=https://seusite.com&text=${encodeURIComponent(c[1])}" target="_blank">Telegram</a>
+</div>
+</div>
+`);
+});
+</script>
+
+  <button onclick="carregarMais()" style="
+width:100%;
+padding:12px;
+font-size:16px;
+background:#4CAF50;
+color:white;
+border:none;
+border-radius:8px;
+margin-bottom:20px;">
+Carregar mais curiosidades 🔄
+</button>
+
+<div id="maisCuriosidades"></div>
+
+<!-- COMENTÁRIOS FUNCIONAIS -->
+<div class="comments">
+<h3>💬 Comentários</h3>
+<textarea id="commentText" placeholder="Escreva seu comentário..."></textarea>
+<button onclick="addComment()">Enviar</button>
+<div id="commentList"></div>
+</div>
+
+<footer>
+© 2026 - Curiosidades & Entretenimento
+</footer>
+
+</div>
+
+<script>
+function addComment(){
+    let text = document.getElementById("commentText").value;
+    if(text==="") return;
+    let comments = JSON.parse(localStorage.getItem("comments") || "[]");
+    comments.push(text);
+    localStorage.setItem("comments", JSON.stringify(comments));
+    document.getElementById("commentText").value="";
+    loadComments();
+}
+function loadComments(){
+    let comments = JSON.parse(localStorage.getItem("comments") || "[]");
+    let list = document.getElementById("commentList");
+    list.innerHTML="";
+    comments.forEach(c=>{
+        list.innerHTML += `<div class="comment">${c}</div>`;
+    });
+}
+loadComments();
+</script>
+
+</body>
+</html>
